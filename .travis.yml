@@ -1,0 +1,25 @@
+---
+language: python
+python: 
+  - "2.7"
+  - "3.6"
+
+before_install:
+  # Make sure everything's up to date.
+  - sudo apt-get update -qq
+
+install:
+  # Install Ansible.
+  - pip install ansible
+
+  # Add ansible.cfg to pick up roles path.
+  - "echo '[defaults]' >> ansible.cfg"
+  - "echo 'roles_path = ../' >> ansible.cfg"
+  - "echo 'inventory = tests/inventory' >> ansible.cfg"
+
+script:
+  - ansible-playbook -i tests/inventory tests/test.yml --syntax-check
+  # We'll add some commands to test the role here.
+
+notifications:
+    webhooks: https://galaxy.ansible.com/api/v1/notifications/
