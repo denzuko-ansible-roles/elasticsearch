@@ -1,5 +1,5 @@
 ---
 - hosts: localhost
   roles:
-     - role: comprescott.jre
-     - role: denzuko.elasticsearch
+     - comprescott.jre
+     - denzuko.elasticsearch
