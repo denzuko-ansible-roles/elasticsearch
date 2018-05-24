@@ -16,8 +16,9 @@ install:
   - "echo '[defaults]' >> ansible.cfg"
   - "echo 'roles_path = ../' >> ansible.cfg"
   - "echo 'inventory = tests/inventory' >> ansible.cfg"
-
+  
 script:
+  - ansible-galaxy install -r tests/requirements.yml
   - ansible-playbook -i tests/inventory tests/test.yml --syntax-check
   # We'll add some commands to test the role here.
 
