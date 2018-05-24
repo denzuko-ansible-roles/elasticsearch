@@ -5,7 +5,7 @@ UA-110571074-1
 Elastic Search Installer for CentOS
 
 ## Installation
-$ ``` ansible-galaxy install denzuko.elasticsearch ```
+$ ``` ansible-galaxy install denzuko-ansible-roles.elasticsearch ```
 
 ## Requirements
 * `ansible=>2.2`
@@ -20,5 +20,5 @@ This module Installs /etc/yum.d/elasticsearch.repo and [Elastic Search](https://
 ```yaml
 - hosts: localhost
   roles:
-     - role: denzuko.elasticsearch
+     - role: denzuko-ansible-roles.elasticsearch
 ```
