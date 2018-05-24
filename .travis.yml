@@ -15,7 +15,7 @@ install:
   # Add ansible.cfg to pick up roles path.
   - "echo '[defaults]' >> ansible.cfg"
   - "echo 'roles_path = ../' >> ansible.cfg"
-  - "echo 'inventory = tests/inventory' >> ansible.cfg"
+  - "echo 'inventory = tests/inventory.ini' >> ansible.cfg"
   
 script:
   - ansible-galaxy install -r tests/requirements.yml
