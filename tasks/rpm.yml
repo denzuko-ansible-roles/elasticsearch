@@ -1,0 +1,11 @@
+---
+    - name: (chore) Install Elastic Repository
+      copy: src=/tmp/elasticsearch.repo dest=/etc/yum.repos.d/elasticsearch.repo
+
+    - name: (chore) Add gpg for elasticserach
+      rpm_key: state=present key=https://artifacts.elastic.co/GPG-KEY-elasticsearch
+
+    - name: (feature) Include ElasticSearch
+      yum: name=elasticsearch enablerepo=elasticsearch state=latest
+      
+# vim:ft=ansible:sts=4:ts=4:et:cin:ai:sw=4:
