@@ -1,4 +1,4 @@
 ---
 - hosts: localhost
   roles:
-     - denzuko.elasticsearch
+     - denzuko-ansible-roles.elasticsearch
