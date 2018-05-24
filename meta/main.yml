@@ -1,0 +1,18 @@
+galaxy_info:
+  author: denzuko
+  description: Elastic Search Installer for CentOS 
+  issue_tracker_url: https://github.com/denzuko-ansible-roles/elasticsearch/issues
+  license: BSD
+  min_ansible_version: 2.0
+  github_branch: master
+  platforms:
+   - name: Centos
+     versions: [ all ]
+   - name: RedHat
+     versions: [ all ]
+
+  galaxy_tags:
+    - elasticsearch
+    
+dependencies:
+    - cmprescott.jre
