@@ -20,6 +20,5 @@ This module Installs /etc/yum.d/elasticsearch.repo and [Elastic Search](https://
 ```yaml
 - hosts: localhost
   roles:
-     - role: comprescott.jre
      - role: denzuko.elasticsearch
 ```
